@@ -1,0 +1,86 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 100%;
+}
+body{
+  background: #2ecc71;
+  height: 100vh;
+  width: 100%;
+  font-family: 'Big Shoulders Display', cursive;
+}
+
+#date-s{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-weight: 700;
+  background: #f1f1f1;
+  max-width: 300px;
+  width: 100%;
+  margin: 1em auto;
+}
+#date{
+  padding: .3125em 2em;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  cursor: pointer;
+}
+#select{
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 3.188em;
+  left: 0;
+  background: #f1f1f1;
+  padding: .3125em;
+}
+.current-d{
+  border-bottom: 1px solid #d1d1d1;
+  display: flex;
+  justify-content: space-between;
+}
+.current-d span{
+  display: inline-block;
+  padding: .5em .3125em;
+  cursor: pointer;
+}
+
+.days-col, #d-container{
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.days-col .item{
+  color: #3498db;
+}
+#d-container .item{
+  border: 1px solid #e1e1e1;
+  cursor: pointer;
+  transition: all .3s;
+}
+#d-container .item:hover{
+  background: #e1e1e1;
+  border-color: #a1a1a1;
+}
+span.item{
+  display: inline-block;
+  width: calc(100%/7);
+  padding: .3125em 0;
+  text-align: center;
+}
+span.other{
+  background: #e1e1e1;
+}
+#d-container span.selected{
+  border-color: #3498db;
+  color: #3498db;
+}
