@@ -48,8 +48,29 @@ body{
 }
 .current-d span{
   display: inline-block;
-  padding: .5em .3125em;
+  padding: .5em 0;
   cursor: pointer;
+}
+
+.arrow-control span{
+  padding: .5em .3125em;
+  float: left;
+}
+
+.h-slider-vw{
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+.h-slider{
+  height: 100%;
+  width: 300%;
+  display: flex;
+}
+.h-slide{
+  width: calc(100%/3);
+  height: 100%;
+  position: relative;
 }
 
 .days-col, #d-container{
@@ -59,22 +80,34 @@ body{
   justify-content: flex-start;
   flex-wrap: wrap;
 }
-.days-col .item{
+.days-col span.item{
   color: #3498db;
 }
-#d-container .item{
+.days-col{
+  z-index: 10;
+  position: absolute;
+  background: #f1f1f1;
+}
+#d-container{
+  margin-top: 40px;
+  transition: all .5s;
+}
+#d-container span.item{
   border: 1px solid #e1e1e1;
   cursor: pointer;
   transition: all .3s;
 }
-#d-container .item:hover{
+#d-container span.item:hover{
   background: #e1e1e1;
   border-color: #a1a1a1;
 }
 span.item{
   display: inline-block;
   width: calc(100%/7);
-  padding: .3125em 0;
+  min-height: 38px;
+  padding: .688em 0;
+  font-size: 1em;
+  line-height: 1em;
   text-align: center;
 }
 span.other{
